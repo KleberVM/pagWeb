@@ -1,5 +1,218 @@
-:root{
-    --primary-color: #f26a2e;
-    --secondary-color: #f7f7f7;
-    --tertiary-color: #f4f4f4;
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #2f00ff;
+    --primary-background:linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(7,26,255,1) 47%, rgba(0,142,255,1) 79%, rgba(255,255,255,1) 100%);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+/* Estilo global */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2 {
+    font-family: 'Georgia', serif;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p, ul {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Estilos para la barra de navegación */
+nav {
+    background: var(--primary-background);
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav li {
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+nav li:hover {
+    background-color: #ffcc00;
+    border-radius: 5px;
+}
+
+/* Estilo para el contenido principal */
+main {
+    margin: 20px;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+article {
+    flex: 1 1 calc(33.333% - 20px);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+article h2 {
+    color: #000080;
+}
+
+article ul {
+    margin-top: 10px;
+}
+
+article ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Estilo para el pie de página */
+footer {
+    background-color: #000080;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 40px;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    main {
+        margin: 10px;
+    }
+
+    section {
+        flex-direction: column;
+    }
+
+    article {
+        flex: 1 1 100%;
+    }
+}
+/* Reset de márgenes y paddings predeterminados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    display: flex;
+}
+/* Estilo para el contenedor del nav */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+/* Estilo para el logo */
+nav .logo {
+    width: 50px; /* Ajusta el tamaño del logo */
+    height: auto;
+    margin-right: 20px;
+}
+
+/* Estilo para el título */
+nav h1 {
+    font-size: 1.8rem;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    flex-grow: 1; /* Para que el título se alinee correctamente */
+}
+
+/* Estilo para la lista de navegación */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* Estilo para los elementos de la lista */
+nav ul li {
+    display: inline-block;
+}
+
+/* Estilo para los enlaces */
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover para los enlaces */
+nav ul li a:hover {
+    background-color: #f7a600;
+    color: #333;
+}
+
+/* Responsive: Cuando la pantalla es pequeña, los elementos se alinean en columna */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    nav .logo {
+        width: 40px;
+    }
+
+    nav h1 {
+        margin-bottom: 15px;
+    }
 }
